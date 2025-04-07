@@ -1,15 +1,23 @@
 import React, { useState } from 'react';
-import "./Welcome.css";
+import axios from 'axios'; // Install axios using `npm install axios`
 
 const ReportItem = () => {
   const [itemName, setItemName] = useState('');
   const [description, setDescription] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Item Reported:', { itemName, description });
-    setItemName('');
-    setDescription('');
+    try {
+      const response = await axios.post('http://localhost:5000/api/items', {
+        itemName,
+        description,
+      });
+      console.log('Item Reported:', response.data);
+      setItemName('');
+      setDescription('');
+    } catch (error) {
+      console.error('Error reporting item:', error);
+    }
   };
 
   return (
