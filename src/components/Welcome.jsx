@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa";
 import "./Welcome.css"; // Ensure this file is updated
 
 const Welcome = () => {
@@ -40,9 +41,12 @@ const Welcome = () => {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.7, type: "spring", stiffness: 120 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
       >
         Get Started →
       </motion.button>
+      
     </motion.div>
   );
 };

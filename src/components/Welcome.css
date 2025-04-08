@@ -12,17 +12,12 @@
 
   }
   h1 {
-    font-family: 'Playfair Display', sans-serif; /* Change font */
-    font-size: 2.5rem; /* Adjust size */
-    font-weight: bold; /* Make it bold */
-    text-align: center; /* Center the text */
-    color: #333; /* Dark gray for readability */
-  }
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: rgb(74, 73, 73);
+    font-family: unset; /* Inherit from the parent */
+}
 
-  h1 .highlight {
-    color: #0c0454 !important; ; 
-    font-family: 'Poppins', serif; 
-  }
 
   
   .logo-container {
@@ -61,4 +56,40 @@
   .start-button:hover {
     background: grey
   }
+  .footer {
+    background: linear-gradient(to right, #3498db, #e91e63);
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+    
+  }
+  
+  .footer .social-icons a {
+    color: white;
+    font-size: 25px;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .footer .social-icons a:hover {
+    transform: scale(1.2);
+    color: #56cfe1; /* Light blue on hover */
+  }
+  
+  .footer p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
   
