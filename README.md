@@ -16,7 +16,7 @@ The platform fosters community convenience and sustainability by providing a cen
 - **Marketplace**: Buy, sell, or trade second-hand goods.
 - **Rental Services**: Rent items such as vehicles or furniture.
 - **User-Friendly Interface**: Built with React.js for a seamless user experience.
-- **Backend API**: Powered by Node.js, Express, and MongoDB for robust data handling.
+- **Backend API**: Powered by Python Flask and MongoDB for robust data handling.
 
 ---
 
@@ -30,11 +30,11 @@ The platform fosters community convenience and sustainability by providing a cen
 
 ### Backend
 
-- **Node.js**: For server-side logic.
-- **Express.js**: For building RESTful APIs.
+- **Python Flask**: For server-side logic.
+- **Flask-CORS**: For handling cross-origin requests.
+- **Flask-RESTful**: For building RESTful APIs.
 - **MongoDB**: For database storage.
-- **Mongoose**: For object data modeling (ODM).
-- **TypeScript**: For type-safe backend development.
+- **PyMongo**: For connecting Flask to MongoDB.
 
 ---
 
@@ -42,6 +42,7 @@ The platform fosters community convenience and sustainability by providing a cen
 
 ### Prerequisites
 
+- Python 3.x installed.
 - Node.js and npm installed.
 - MongoDB installed and running locally.
 
@@ -53,22 +54,27 @@ The platform fosters community convenience and sustainability by providing a cen
 git clone https://github.com/your-repo/lost-found-app.git
 cd lost-found-app
 ```
+
+GitHub Copilot
+Here’s the updated README.md file reflecting the Python Flask backend:
+
 2. Install Dependencies
 Frontend
 ```bash
 cd lost-found-app
 npm install
 ```
+
 Backend
 ```bash
 cd lost-found-app-backend
-npm install
+pip install -r requirements.txt
 ```
 
 3. Configure Environment Variables
 Create a .env file in the lost-found-app-backend directory and add the following:
 ```bash
-MONGO_URI=mongodb://localhost:27017/lost-found-app
+MONGO_URI=mongodb://localhost:27017/lost_found_app
 PORT=5000
 ```
 
@@ -76,9 +82,8 @@ PORT=5000
 Start the Backend
 ```bash
 cd lost-found-app-backend
-npm run dev
+python app.py
 ```
-
 Start the Frontend
 ```bash
 cd lost-found-app
@@ -86,7 +91,6 @@ npm start
 ```
 
 5. Access the Application
-Open your browser and navigate to:
 ```bash
 http://localhost:3000
 ```
