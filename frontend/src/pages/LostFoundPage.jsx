@@ -1,12 +1,14 @@
 "use client"
 
-import { useState } from "react"
+import React, { useState } from "react"
+import { useNavigate } from "react-router-dom" // Import useNavigate
 import ItemCard from "../components/ItemCard"
 import "../styles/lost-found-page.css"
 
 const LostFoundPage = () => {
   const [activeTab, setActiveTab] = useState("all")
   const [searchTerm, setSearchTerm] = useState("")
+  const navigate = useNavigate() // Initialize useNavigate
 
   // Mock data for development
   const mockItems = [
@@ -82,7 +84,13 @@ const LostFoundPage = () => {
           />
         </div>
 
-        <button className="post-button">Post New Item</button>
+        {/* Post New Button */}
+        <button
+          className="post-button"
+          onClick={() => navigate("/post-lost-item")} // Navigate to PostLostItemPage
+        >
+          Post New Item
+        </button>
       </div>
 
       <div className="tabs">

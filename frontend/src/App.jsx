@@ -12,6 +12,9 @@ import ItemDetailPage from "./pages/ItemDetailPage"
 import ProfilePage from "./pages/ProfilePage"
 import LoginPage from "./pages/LoginPage"
 import RegisterPage from "./pages/RegisterPage"
+import SellItemPage from "./pages/SellItemPage" // Import the new page
+import PostLostItemPage from "./pages/PostLostItemPage" // Import the new page
+import ListForRentPage from "./pages/ListForRentPage" // Import the new page
 import { UserContext } from "./context/UserContext"
 
 function App() {
@@ -31,6 +34,9 @@ function App() {
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
+            <Route path="/sell-item" element={<SellItemPage />} /> {/* Add the new route */}
+            <Route path="/post-lost-item" element={<PostLostItemPage />} /> {/* Add the new route */}
+            <Route path="/list-for-rent" element={<ListForRentPage />} /> {/* Add the new route */}
           </Routes>
         </main>
         <Footer />

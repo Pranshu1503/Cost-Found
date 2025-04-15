@@ -1,0 +1,39 @@
+.post-lostitem-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.post-lostitem-page h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.post-lostitem-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.post-lostitem-page input,
+.post-lostitem-page textarea,
+.post-lostitem-page select,
+.post-lostitem-page button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--light-gray);
+  border-radius: var(--border-radius);
+}
+
+.post-lostitem-page button {
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+}
+
+.post-lostitem-page button:hover {
+  background-color: var(--secondary-color);
+}

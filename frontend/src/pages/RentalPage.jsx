@@ -1,12 +1,14 @@
 "use client"
 
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import ItemCard from "../components/ItemCard"
 import "../styles/rental-page.css"
 
 const RentalPage = () => {
   const [searchTerm, setSearchTerm] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("all")
+  const navigate = useNavigate()
 
   // Mock data for development
   const mockItems = [
@@ -131,7 +133,12 @@ const RentalPage = () => {
               />
             </div>
 
-            <button className="post-button">List for Rent</button>
+            <button
+              className="post-button"
+              onClick={() => navigate("/list-for-rent")} // Navigate to ListForRentPage
+            >
+              List for Rent
+            </button>
           </div>
 
           <div className="rental-info-banner">

@@ -1,0 +1,39 @@
+.sell-item-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.sell-item-page h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sell-item-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sell-item-page input,
+.sell-item-page textarea,
+.sell-item-page select,
+.sell-item-page button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--light-gray);
+  border-radius: var(--border-radius);
+}
+
+.sell-item-page button {
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+}
+
+.sell-item-page button:hover {
+  background-color: var(--secondary-color);
+}
