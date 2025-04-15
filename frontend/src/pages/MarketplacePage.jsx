@@ -1,10 +1,12 @@
 "use client"
 
 import { useState } from "react"
+import { useNavigate } from "react-router-dom" // Add this import
 import ItemCard from "../components/ItemCard"
 import "../styles/marketplace-page.css"
 
 const MarketplacePage = () => {
+  const navigate = useNavigate() // Add this hook
   const [searchTerm, setSearchTerm] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("all")
   const [priceRange, setPriceRange] = useState({ min: "", max: "" })
@@ -54,6 +56,15 @@ const MarketplacePage = () => {
       category: "furniture",
       condition: "fair",
       image: "/photos/desk.jpg",
+    },
+    {
+      id: "5",
+      title: "Blue water bottle",
+      description: "Milton.",
+      date: new Date().toISOString(),
+      price: 100,
+      category: "other",
+      image: "/photos/image.png",
     },
   ]
 
@@ -145,7 +156,9 @@ const MarketplacePage = () => {
               />
             </div>
 
-            <button className="post-button">Sell an Item</button>
+            <button className="post-button" onClick={() => navigate("/sell-item")}>
+              Sell an Item
+            </button>
           </div>
 
           <div className="items-grid">
