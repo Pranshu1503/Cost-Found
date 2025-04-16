@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-section">
           <h3>Cost&Found</h3>
-          <p>Find what you lost, sell what you don't need, rent what you want.</p>
+          <p>Find, sell & rent.</p>
         </div>
 
         <div className="footer-section">
